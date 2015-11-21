@@ -1,12 +1,18 @@
 package services;
 
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-@Component
-@Qualifier("oneService")
+@Service
 public class OneService {
+    @Autowired
+    private OneDao oneDao;
+
     public int apply() {
-        return 1;
+        return oneDao.apply(1);
+    }
+
+    public int apply(int id) {
+        return oneDao.apply(id);
     }
 }

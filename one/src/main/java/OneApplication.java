@@ -3,9 +3,11 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import services.OneService;
 
-@ComponentScan("services")
+@ComponentScan(basePackages = "services")
+@Configuration
 public class OneApplication implements ApplicationRunner {
 
     @Autowired
@@ -17,6 +19,6 @@ public class OneApplication implements ApplicationRunner {
 
 
     public void run(ApplicationArguments args) throws Exception {
-        oneService.apply();
+        System.out.println(oneService.apply());
     }
 }
