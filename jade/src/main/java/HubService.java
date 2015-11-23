@@ -5,10 +5,6 @@ public class HubService {
         this.hubDao = hubDao;
     }
 
-    public HubDao getHubDao() {
-        return hubDao;
-    }
-
     public HubEntity find(int id) {
         return hubDao.find(id);
     }
