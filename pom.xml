@@ -4,6 +4,25 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>http://localhost:8081/nexus/content/repositories/central/</url>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>OneSnapshot</id>
+            <url>http://localhost:8081/nexus/content/repositories/OneSnapshot</url>
+        </snapshotRepository>
+
+        <repository>
+            <id>OneRelease</id>
+            <url>http://localhost:8081/nexus/content/repositories/OneRelease</url>
+        </repository>
+    </distributionManagement>
+
     <groupId>com.evcheung.code</groupId>
     <artifactId>hub</artifactId>
     <packaging>pom</packaging>
