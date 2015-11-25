@@ -30,6 +30,7 @@
     <modules>
         <module>jade</module>
         <module>one</module>
+        <module>wakeup</module>
     </modules>
 
     <dependencies>
