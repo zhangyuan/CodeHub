@@ -10,6 +10,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import services.OneDao;
 import services.OneService;
 
+import static org.easymock.EasyMock.anyInt;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -26,7 +27,7 @@ public class OneTestWithMock {
     @Test
     public void testOneServiceApplyWithParameter() throws Exception {
         EasyMockSupport.injectMocks(this);
-        EasyMock.expect(oneDao.apply(1)).andReturn(10);
+        EasyMock.expect(oneDao.apply(anyInt())).andReturn(10);
 
         EasyMock.replay(oneDao);
 
